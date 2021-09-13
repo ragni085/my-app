@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store/index'
 import App from './App';
-import FamilyInfo from './profie/familyInfo'
-import EduInfo from './profie/eduInfo'
-import PersionalInfo from './profie/persionalInfo'
+import FamilyInfo from './profile/familyInfo'
+import EduInfo from './profile/eduInfo'
+import PersonalInfo from './profile/personalInfo'
+import Preview from './profile/preview';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.render(
   <Provider store = {store}>
     <App />
+    <ToastContainer />
   </Provider>,
   document.getElementById('root')
 );

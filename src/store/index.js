@@ -1,15 +1,15 @@
 import {  applyMiddleware, combineReducers, createStore } from "redux";
 import  thunkMiddleware  from "redux-thunk";
 import { composeWithDevTools } from 'redux-devtools-extension';
-import auth from './auth/reducer';
+import student from './student/reducer';
 
 
 const appReducer = combineReducers({
-    auth
+    student
 });
 
 const rootReducer = (state,action) => {
-
+    return appReducer(state,action)
 }
 
 function configureStore (preloadedstate) {
